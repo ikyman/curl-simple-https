@@ -67,7 +67,7 @@ int main(void) {
         printf("status_code: %l\n# response\n%s", response.code, response.body);
         return EXIT_SUCCESS;
     } else {
-        fprintf(stderr, "curl error: %s\n", curl_easy_strerror(res));
+        fprintf(stderr, "curl error: %s\n", curl_easy_strerror(response.code));
         return EXIT_SUCCESS;
     }
 }
